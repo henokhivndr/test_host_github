@@ -1,0 +1,259 @@
+/* Reset & Variabel */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --dark-color: #0f172a;
+    --light-bg: #f8fafc;
+    --text-muted: #64748b;
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Kustomisasi Scrollbar (Opsional) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+/* Tombol-Tombol */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 10rem 0 6rem 0;
+    background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.05em;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Layout Umum & Card */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.features, .pricing {
+    padding: 5rem 0;
+}
+
+.features {
+    background-color: var(--light-bg);
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+/* Pricing Card Khusus */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.pricing-card.featured {
+    border-color: var(--primary-color);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.pricing-card ul {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.pricing-card ul li {
+    padding: 0.5rem 0;
+    text-align: center;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--text-muted);
+}
+
+.cta-btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: #cbd5e1;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 768px) {
+    .nav-links, header .btn {
+        display: none; /* Menyederhanakan tampilan mobile */
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
